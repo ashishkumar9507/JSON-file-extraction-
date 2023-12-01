@@ -58,3 +58,35 @@ function dairy(arr){
     );
     console.log(result);
 }
+
+//list all the food items with calorie above 100
+function calAbv100(arr){
+    const result= arr.filter(item => 
+        item.calorie > 100
+    );
+    console.log(result);
+}
+
+//list all the food items with calorie below 100
+function calBlw100(arr){
+    const result= arr.filter(item => 
+        item.calorie < 100
+    );
+    console.log(result);
+}
+
+//list all the food items with highest protien content to lowest
+function proteinDesc(arr){
+    const newArr= arr.sort(function(a,b){
+        return b.protiens - a.protiens
+    })
+    console.log(newArr);
+}
+
+//list all the food items with lowest cab content to highest
+function proteinAsc(arr){
+    const newArr= arr.sort(function(a,b){
+        return a.cab - b.cab
+    })
+    console.log(newArr);
+}
